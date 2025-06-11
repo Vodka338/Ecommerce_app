@@ -87,7 +87,16 @@ void mergeSort(vector<Product>& arr, int l, int r) {
     }
 }
 
-
+// Bubble Sort by Name
+void bubbleSort(vector<Product>& arr) {
+    for (size_t i = 0; i < arr.size() - 1; i++) {
+        for (size_t j = 0; j < arr.size() - i - 1; j++) {
+            if (arr[j].name > arr[j + 1].name) {
+                swap(arr[j], arr[j + 1]);
+            }
+        }
+    }
+}
 
 int main() {
     vector<Product> products;
