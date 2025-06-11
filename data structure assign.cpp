@@ -9,6 +9,33 @@ struct Product {
     float rating;
 };
 
+// Input products from user
+void inputProducts(vector<Product>& products, int count) {
+    for (int i = 0; i < count; i++) {
+        Product p;
+        cout << "\nEnter details for product " << i + 1 << ":\n";
+        cout << "ID: ";
+        cin >> p.id;
+        cout << "Name: ";
+        cin >> ws;
+        getline(cin, p.name);
+        cout << "Price: ";
+        cin >> p.price;
+        cout << "Rating: ";
+        cin >> p.rating;
+        products.push_back(p);
+    }
+}
+
+// Display products
+void display(const vector<Product>& products) {
+    cout << "\nID\tName\t\tPrice\tRating\n";
+    for (const auto& p : products) {
+        cout << p.id << "\t" << p.name << "\t\t" << p.price << "\t" << p.rating << "\n";
+    }
+}
+
+
 
 
 int main() {
